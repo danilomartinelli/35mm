@@ -47,7 +47,6 @@ end
 
 group :development do
   gem "rubocop"
-  gem "rubocop-fnando"
   gem "rubocop-performance"
   gem "rubocop-rails"
 end
