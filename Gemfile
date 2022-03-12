@@ -46,6 +46,8 @@ gem "env_vars"
 
 gem "dotenv"
 
+gem "rails-env"
+
 group :development, :test do
   gem "pry-meta"
 end

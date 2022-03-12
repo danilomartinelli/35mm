@@ -172,6 +172,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-env (2.0.2)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
     railties (7.0.2.3)
@@ -253,6 +254,7 @@ DEPENDENCIES
   pry-meta
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  rails-env
   rubocop
   rubocop-performance
   rubocop-rails
