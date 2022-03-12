@@ -41,6 +41,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Access environment variables. Also includes presence validation, type coercion and default values.
+gem "env_vars"
+
+gem "dotenv"
+
 group :development, :test do
   gem "pry-meta"
 end
