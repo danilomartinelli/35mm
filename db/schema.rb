@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_12_132154) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_13_203042) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
+
+  create_table "auth_codes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.jsonb "code", null: false
+    t.timestamptz "expires_at", null: false
+    t.timestamptz "created_at", null: false
+    t.timestamptz "updated_at", null: false
+    t.index ["code"], name: "index_auth_codes_on_code", unique: true
+  end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.jsonb "email", null: false

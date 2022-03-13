@@ -6,5 +6,8 @@ module ThirtyFiveMm
     mandatory :tz, string
 
     credential :encryptor_secret
+    credential :signed_url_secret
+
+    optional :app_host, string, "dev.danilomartinelli.xyz"
   end
 end

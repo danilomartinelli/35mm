@@ -68,6 +68,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ar-bigint (0.2.0)
+      activerecord
+    ar-timestamptz (0.2.0)
+      activerecord
     ar-uuid (0.2.2)
       activerecord
     ast (2.4.2)
@@ -89,12 +93,15 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    defaults (2.0.0)
+      activerecord (>= 5.0.0)
     digest (3.1.0)
     dotenv (2.7.6)
     env_vars (2.0.0)
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    haikunate (0.1.1)
     human_routes (0.0.5)
       rails
     i18n (1.10.0)
@@ -233,6 +240,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    url_signature (0.0.2)
     voltage (0.1.0)
     webdrivers (5.0.0)
       nokogiri (~> 1.6)
@@ -249,11 +257,15 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  ar-bigint
+  ar-timestamptz
   ar-uuid
   bootsnap
   capybara
+  defaults
   dotenv
   env_vars
+  haikunate
   human_routes
   importmap-rails
   minitest-utils
@@ -269,6 +281,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   turbo-rails
+  url_signature
   voltage
   webdrivers
 
