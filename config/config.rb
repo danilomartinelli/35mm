@@ -5,6 +5,6 @@ module ThirtyFiveMm
     mandatory :database_url, string
     mandatory :tz, string
 
-    credential :encryption_key
+    credential :encryptor_secret
   end
 end

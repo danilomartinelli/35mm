@@ -1,5 +1,5 @@
-class User < ApplicationRecord
-  attr_keyring ENV["USER_KEYRING"], digest_salt: "<custom_salt>"
+# frozen_string_literal: true
 
-  attr_encrypt :email
+class User < ApplicationRecord
+  encrypts :email, deterministic: true, downcase: true
 end

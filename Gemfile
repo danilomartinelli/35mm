@@ -50,9 +50,9 @@ gem "rails-env"
 
 gem "human_routes"
 
-gem "attr_keyring"
-
 gem "ar-uuid"
+
+gem "voltage"
 
 group :development, :test do
   gem "pry-meta"
