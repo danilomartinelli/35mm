@@ -1,7 +1,7 @@
 ---
 development:
-  url: postgres://postgres:postgres@localhost/33mm_dev
+  url: <%= ThirtyFiveMm::Config.database_url %>
 test:
-  url: postgres://postgres:postgres@localhost/33mm_test
+  url: <%= ThirtyFiveMm::Config.database_url %>
 production:
   url: <%= ThirtyFiveMm::Config.database_url %>
