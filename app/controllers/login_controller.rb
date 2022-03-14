@@ -8,7 +8,7 @@ class LoginController < ApplicationController
   def create
     @login_form = LoginForm.new(login_params)
 
-    LoginForm.call(@login_form) do |action|
+    Login.call(@login_form) do |action|
       action.on(:success) do
         redirect_to check_your_inbox_path
       end
