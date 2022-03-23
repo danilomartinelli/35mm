@@ -7,5 +7,11 @@ class AuthCode < ApplicationRecord
     Haiku.call(variant: lambda {
       SecureRandom.hex(5)
     })
-  }, expires_at: -> { 5.minutes.from_now }
+  }, expires_at: lambda {
+                   ThirtyFiveMm::Config.email_verification_ttl.minutes.from_now
+                 }
+
+  def expired?
+    Time.now.to_i > expires_at.to_i
+  end
 end

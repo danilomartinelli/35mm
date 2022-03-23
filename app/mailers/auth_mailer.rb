@@ -1,13 +1,17 @@
-class AuthMailer < ApplicationMailer
+# frozen_string_literal: true
 
+class AuthMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
   #   en.auth_mailer.verify_email.subject
   #
-  def verify_email
-    @greeting = "Hi"
+  def login(encrypted_email, encrypted_login_link)
+    @email = Encryptor.decrypt(encrypted_email, purpose: :login)
+    @login_link = Encryptor.decrypt(encrypted_login_link, purpose: :login)
 
-    mail to: "to@example.org"
+    return unless @email
+
+    mail to: @email
   end
 end

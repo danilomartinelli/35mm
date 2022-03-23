@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class LoginLink
-  def self.create(email)
+  def self.create!(email)
     auth_code = AuthCode.create!
 
     url = Rails.application.routes.url_helpers.verify_email_url(email:,
@@ -19,9 +19,11 @@ class LoginLink
 
     return unless params["code"]
 
-    auth_code = AuthCode.lock.where("expires_at > now()").find_by(code: params["code"])
+    auth_code = AuthCode.lock.find_by(code: params["code"])
 
     return unless auth_code
+
+    return if auth_code.expired?
 
     matched = ActiveSupport::SecurityUtils.secure_compare(params["code"],
                                                           auth_code.code)

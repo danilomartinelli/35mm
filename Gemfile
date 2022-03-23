@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
@@ -44,14 +44,15 @@ gem "bootsnap", require: false
 gem "ar-bigint"
 gem "ar-timestamptz"
 gem "ar-uuid"
+gem "defaults"
 gem "dotenv"
 gem "env_vars"
+gem "haikunate"
 gem "human_routes"
 gem "rails-env"
 gem "url_signature"
 gem "voltage"
-gem "haikunate"
-gem "defaults"
+gem "simple_auth"
 
 group :development, :test do
   gem "pry-meta"

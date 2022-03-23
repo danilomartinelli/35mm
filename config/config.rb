@@ -9,5 +9,7 @@ module ThirtyFiveMm
     credential :signed_url_secret
 
     optional :app_host, string, "dev.danilomartinelli.xyz"
+    optional :default_email_sender, string, "hi@example.com"
+    optional :email_verification_ttl, int, 10.minutes
   end
 end
