@@ -70,6 +70,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ar-bigint (0.2.0)
       activerecord
+    ar-check (0.2.2)
+      activerecord
     ar-timestamptz (0.2.0)
       activerecord
     ar-uuid (0.2.2)
@@ -261,6 +263,7 @@ PLATFORMS
 
 DEPENDENCIES
   ar-bigint
+  ar-check
   ar-timestamptz
   ar-uuid
   bootsnap

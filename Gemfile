@@ -42,6 +42,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "ar-bigint"
+gem "ar-check"
 gem "ar-timestamptz"
 gem "ar-uuid"
 gem "defaults"
@@ -50,9 +51,9 @@ gem "env_vars"
 gem "haikunate"
 gem "human_routes"
 gem "rails-env"
+gem "simple_auth"
 gem "url_signature"
 gem "voltage"
-gem "simple_auth"
 
 group :development, :test do
   gem "pry-meta"

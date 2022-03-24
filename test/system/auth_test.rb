@@ -28,9 +28,7 @@ class AuthTest < ApplicationSystemTestCase
 
     click_email_link("Verify your email")
 
-    fill_in "Choose your username", with: "john"
-    click_on "Chose username"
-
-    assert_equal root_path, current_url
+    assert_equal root_path, current_path
+    assert_selector "span.username", text: User.last.username
   end
 end
