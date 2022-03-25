@@ -54,6 +54,8 @@ gem "rails-env"
 gem "simple_auth"
 gem "url_signature"
 gem "voltage"
+gem "sprockets-rails"
+gem "jsbundling-rails"
 
 group :development, :test do
   gem "pry-meta"
