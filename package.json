@@ -7,6 +7,8 @@
     "esbuild": "^0.14.27"
   },
   "scripts": {
-    "build": "esbuild app/assets/scripts/*.* --minify --bundle --sourcemap --outdir=app/assets/builds"
+    "build": "yarn build:js && yarn build:css",
+    "build:js": "esbuild app/assets/scripts/*.* --minify --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "postcss ./app/assets/stylesheets/application.css --use postcss-import autoprefixer tailwindcss --config config/postcss.config.js --minify  --output ./app/assets/builds/application.css"
   }
 }

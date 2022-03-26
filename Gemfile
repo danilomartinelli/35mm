@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "3.1.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
@@ -54,8 +54,8 @@ gem "rails-env"
 gem "simple_auth"
 gem "url_signature"
 gem "voltage"
-gem "sprockets-rails"
 gem "jsbundling-rails"
+gem "tailwindcss-rails"
 
 group :development, :test do
   gem "pry-meta"
